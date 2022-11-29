@@ -1,13 +1,8 @@
 const itemEl = document.querySelectorAll(".item");
 console.log("Number of categories", itemEl.length);
 
-// const titleEl = document.querySelectorAll(".item h2");
-// console.log("Category:", titleEl[0].textContent);
-
-// const quantity = ItemEl[0].lastElementChild.children.length;
-
-// console.log(bb);
-console.log(itemEl);
-const listItems = itemEl.map((itm) => {
-  //   titleEl = itm.firstChild.textContent;
+const report = itemEl.forEach((rep) => {
+  const titleEl = planet.querySelector("h2");
+  console.log("Category:", titleEl.textContent);
+  console.log("Elements", rep.lastElementChild.children.length);
 });
