@@ -3,9 +3,9 @@ console.log(validationInput.dataset.length);
 console.log(validationInput.value.length);
 
 validationInput.addEventListener("blur", (event) => {
-  let ddd = event.currentTarget.value.length;
   console.log(ddd);
   if (ddd === validationInput.dataset.length) {
+  if (event.currentTarget.value.length === validationInput.dataset.length) {
     validationInput.classList.add("validation-input.valid");
     console.log(validationInput.value);
   }
