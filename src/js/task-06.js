@@ -1,12 +1,12 @@
-const validationInput = document.querySelector("#validation-input");
-console.log(validationInput.dataset.length);
-console.log(validationInput.value.length);
+const inputRef = document.querySelector("#validation-input");
 
-validationInput.addEventListener("blur", (event) => {
-  console.log(event.currentTarget.value.length);
-  if (event.currentTarget.value.length === validationInput.dataset.length) {
-    validationInput.classList.add("validation-input.valid");
-    console.log(validationInput.value);
-  }
-});
-// console.log(validationInput.value);
+console.log(Number(inputRef.dataset.length));
+
+inputRef.addEventListener("blur", onInputBlur);
+
+function onInputBlur(event) {
+  if (event.currentTarget.value.length === Number(inputRef.dataset.length)) {
+    inputRef.classList.add(`valid`);
+    console.log(event.currentTarget.value.length);
+  } else inputRef.classList.replace(`valid`, `invalid`);
+}
